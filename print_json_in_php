@@ -1,0 +1,115 @@
+<?php
+$data='{
+			"resultList":[
+							{
+								"id":"1839",
+								"displayName":"Analytics",
+								"subLine":"",
+								"price":25
+							},
+							{
+								"id":"1015",
+								"displayName":"Automation",
+								"subLine":"",
+								"price":25
+							},
+							{
+								"id":"1084",
+								"displayName":"Aviation",
+								"subLine":"",
+								"price":25
+							},
+							{
+								"id":"554",
+								"displayName":"Apparel",
+								"subLine":"",
+								"price":25
+							},
+							{
+								"id":"875",
+								"displayName":"Aerospace",
+								"subLine":"",
+								"price":25
+							},
+							{
+								"id":"1990",
+								"displayName":"Account Reconciliation",
+								"subLine":"",
+								"price":25
+							},
+							{
+								"id":"3657",
+								"displayName":"Android",
+								"subLine":"",
+								"price":25
+							},
+							{
+								"id":"1262",
+								"displayName":"Apache",
+								"subLine":"",
+								"price":25
+							},
+							{
+								"id":"1440",
+								"displayName":"Acting",
+								"subLine":"",
+								"price":25
+							},
+							{
+								"id":"710",
+								"displayName":"Aircraft",
+								"subLine":"",
+								"price":25
+							},
+							{
+								"id":"12187",
+								"displayName":"AAC",
+								"subLine":"",
+								"price":25
+							}, 
+							{
+								"id":"20365",
+								"displayName":"AAT",
+								"subLine":"",
+								"price":25
+							}, 
+							{
+								"id":"7849",
+								"displayName":"AAP",
+								"subLine":"",
+								"price":25
+							}, 
+							{
+								"id":"20511",
+								"displayName":"AACR2",
+								"subLine":"",
+								"price":25
+							},
+							{
+								"id":"28585",
+								"displayName":"AASHTO",
+								"subLine":"",
+								"price":25
+							}, 
+							{
+								"id":"45191",
+								"displayName":"AAMS",
+								"subLine":"",
+								"price":25
+							}
+					]
+		}';
+
+$b=json_decode($data,true);
+$count=0;
+	foreach ($b['resultList'] as $key => $value) {
+				//echo "id" .":".$value['id'];
+				echo "id" .":".$value['id'].','."displayName" ."  :".$value['displayName'] .', '.", subLine" .":".$value['subLine'] .', '. ",  price" .":".$value['price'];
+				//echo "subLine" .":".$value['subLine'];
+				//echo "price" .":".$value['price'];
+		echo "<br>";
+		$count=$count+$value['price'];
+	}
+	echo "Total  "."   ".$count;
+
+?>
